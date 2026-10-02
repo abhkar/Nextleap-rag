@@ -17,16 +17,21 @@ form button{padding:10px 16px;border:0;border-radius:8px;background:var(--acc);c
 <div id="log"></div>
 <form id="f"><input id="q" maxlength="300" placeholder="Ask a factual question..." autocomplete="off"><button>Ask</button></form>
 <p class="note">Facts-only. No investment advice.</p>
-<p class="mute">Please don't enter PAN, Aadhaar, account numbers, OTPs, emails or phone numbers. Nothing you type is stored or sent anywhere.</p></main>
+<p class="mute">Please don't enter PAN, Aadhaar, account numbers, OTPs, emails or phone numbers. Questions are processed to produce an answer and are not stored or logged.</p></main>
 <script src="assistant.js"></script>
 <script>
 let A; const log=document.getElementById('log'),q=document.getElementById('q');
 fetch('data.json').then(r=>r.json()).then(D=>{A=makeAssistant(D)});
 const esc=t=>t.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const linkify=t=>t.replace(/(https?:\/\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
-function ask(text){if(!text.trim()||!A)return;const d=document.createElement('div');
-d.innerHTML='<div class="q"></div><div class="a"></div>';d.firstChild.textContent=text;d.lastChild.innerHTML=linkify(esc(A.ask(text).answer));
-log.appendChild(d);q.value=''}
+async function answer(text){
+  try{const r=await fetch('/api/ask',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({q:text})});
+    if(r.ok)return await r.json()}catch(e){}
+  return A?A.ask(text):{answer:'Sorry, the assistant is unavailable right now.'}  // offline/static fallback (curated facts only)
+}
+async function ask(text){if(!text.trim())return;const d=document.createElement('div');
+d.innerHTML='<div class="q"></div><div class="a">...</div>';d.firstChild.textContent=text;log.appendChild(d);q.value='';
+const j=await answer(text);d.lastChild.innerHTML=linkify(esc(j.answer))+(j.path?'<div class="mute">answered via: '+j.path+'</div>':'')}
 document.getElementById('f').onsubmit=e=>{e.preventDefault();ask(q.value)};
 document.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>ask(b.textContent));
 </script></html>

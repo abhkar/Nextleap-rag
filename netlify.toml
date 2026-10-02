@@ -1,2 +1,14 @@
 [build]
   publish = "web"
+  functions = "netlify/functions"
+
+[functions]
+  included_files = ["netlify/functions/data/**"]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "no-referrer"

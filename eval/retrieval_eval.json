@@ -1,0 +1,22 @@
+[
+ {"q": "What is the inception date?", "scheme": "HDFC Flexi Cap Fund", "expect": "January 1, 1995"},
+ {"q": "Who is the fund manager?", "scheme": "HDFC Flexi Cap Fund", "expect": "Amit Ganatra"},
+ {"q": "What is the AUM of the scheme?", "scheme": "HDFC Flexi Cap Fund", "expect": "113,606.47"},
+ {"q": "What is the top equity holding?", "scheme": "HDFC Flexi Cap Fund", "expect": "ICICI Bank Ltd."},
+ {"q": "What is the standard deviation and beta?", "scheme": "HDFC Flexi Cap Fund", "expect": "Standard Deviation"},
+ {"q": "When was the scheme launched?", "scheme": "HDFC Mid Cap Fund", "expect": "25-6-2007"},
+ {"q": "What does the Nifty Midcap 150 index capture?", "scheme": "HDFC Mid Cap Fund", "expect": "midcap segment"},
+ {"q": "What is the total expense ratio slab for the first 500 crores?", "scheme": "HDFC Mid Cap Fund", "expect": "2.25% p.a."},
+ {"q": "What is the exit load period?", "scheme": "HDFC Mid Cap Fund", "expect": "1.00%"},
+ {"q": "Who manages the fund?", "scheme": "HDFC Mid Cap Fund", "expect": "Chirag Setalvad"},
+ {"q": "Is there a statutory lock in?", "scheme": "HDFC ELSS Tax Saver Fund", "expect": "statutory lock in of 3 years"},
+ {"q": "Who is the fund manager?", "scheme": "HDFC ELSS Tax Saver Fund", "expect": "Amar Kalkundrikar"},
+ {"q": "What is the AUM?", "scheme": "HDFC ELSS Tax Saver Fund", "expect": "15,991.78"},
+ {"q": "What is the minimum application amount?", "scheme": "HDFC ELSS Tax Saver Fund", "expect": "Rs. 500/-"},
+ {"q": "When was the scheme renamed?", "scheme": "HDFC ELSS Tax Saver Fund", "expect": "26th August 2026"},
+ {"q": "What is the exit load on day 1?", "scheme": "HDFC Liquid Fund", "expect": "0.0070%"},
+ {"q": "What is the inception date?", "scheme": "HDFC Liquid Fund", "expect": "October 17, 2000"},
+ {"q": "Who is the fund manager?", "scheme": "HDFC Liquid Fund", "expect": "Swapnil Jangam"},
+ {"q": "What is the minimum for the daily IDCW option?", "scheme": "HDFC Liquid Fund", "expect": "Rs.10,000/-"},
+ {"q": "What is the TER on the balance of assets?", "scheme": "HDFC Liquid Fund", "expect": "0.80% p.a."}
+]

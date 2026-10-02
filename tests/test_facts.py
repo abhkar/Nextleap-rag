@@ -22,6 +22,14 @@ class FactQuotes(unittest.TestCase):
                 self.assertIn(norm(q), page, f"{f['id']}: quote not on p.{f['page']}: {q}")
 
 
+class RetrievalQuality(unittest.TestCase):
+    def test_hit_rate_gate(self):
+        sys.path.insert(0, str(ROOT / "eval"))
+        from retrieval_eval import run, MIN_HIT_RATE
+        rate, misses = run(3)
+        self.assertGreaterEqual(rate, MIN_HIT_RATE, misses)
+
+
 class Behaviour(unittest.TestCase):
     a = Assistant()
 

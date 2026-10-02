@@ -15,6 +15,9 @@ TOPICS = {
     "lock-in": (r"lock[- ]?in|elss|80c", ["lock-in", "lock in"], ["sid", "kim"]),
     "riskometer": (r"risk(o)?meter|risk level|how risky", ["riskometer"], ["factsheet", "kim"]),
     "benchmark": (r"benchmark|index", ["benchmark"], ["factsheet", "kim"]),
+    "fund manager": (r"fund manager|who manages|managed by|manager", ["fund manager"], ["factsheet", "leaflet", "sid"]),
+    "inception": (r"inception|launched|launch date|since when|started", ["inception date"], ["factsheet", "kim", "sid"]),
+    "holdings": (r"holding|top 10|top ten|largest (stock|position)", ["top 10 equity holdings", "top 10"], ["factsheet"]),
     "statement": (r"statement|cas\b|capital[- ]gains?|download|tax", ["account statement", "consolidated account statement", "capital gain"], ["kim", "sid"]),
 }
 

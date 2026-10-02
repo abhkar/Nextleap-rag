@@ -181,7 +181,7 @@
  {
   "id": "category",
   "scheme": "HDFC Mid Cap Fund",
-  "pattern": "category|type of (fund|scheme)|what kind|inception|launch",
+  "pattern": "category|type of (fund|scheme)|what kind",
   "source_id": "mc_kim",
   "page": 1,
   "answer": "HDFC Mid Cap Fund (formerly HDFC Mid-Cap Opportunities Fund) is an open-ended equity scheme predominantly investing in mid cap stocks.",
