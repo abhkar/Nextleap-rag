@@ -153,6 +153,99 @@
    ]
   ]
  },
+ "sources": [
+  {
+   "title": "HDFC Flexi Cap Fund - Fund Facts (Factsheet) September 2026",
+   "doc_type": "factsheet",
+   "scheme": "HDFC Flexi Cap Fund",
+   "as_of": "2026-08-31",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Flexi Cap Fund - Key Information Memorandum dated 21 Nov 2025",
+   "doc_type": "kim",
+   "scheme": "HDFC Flexi Cap Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Flexi Cap Fund - Scheme Information Document dated 21 Nov 2025",
+   "doc_type": "sid",
+   "scheme": "HDFC Flexi Cap Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Flexi Cap Fund - Leaflet May 2026",
+   "doc_type": "leaflet",
+   "scheme": "HDFC Flexi Cap Fund",
+   "as_of": "2026-05-29",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Flexi Cap Fund - Presentation July 2026",
+   "doc_type": "presentation",
+   "scheme": "HDFC Flexi Cap Fund",
+   "as_of": "2026-07-31",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Mid Cap Fund - Key Information Memorandum dated 21 Nov 2025",
+   "doc_type": "kim",
+   "scheme": "HDFC Mid Cap Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Mid Cap Fund - Scheme Information Document dated 21 Nov 2025",
+   "doc_type": "sid",
+   "scheme": "HDFC Mid Cap Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct"
+  },
+  {
+   "title": "HDFC Mid Cap Fund - Leaflet May 2026",
+   "doc_type": "leaflet",
+   "scheme": "HDFC Mid Cap Fund",
+   "as_of": "2026-05-31",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct"
+  },
+  {
+   "title": "HDFC ELSS Tax Saver Fund - Fund Facts (Factsheet) September 2026",
+   "doc_type": "factsheet",
+   "scheme": "HDFC ELSS Tax Saver Fund",
+   "as_of": "2026-08-31",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-elss-tax-saver-fund/direct"
+  },
+  {
+   "title": "HDFC ELSS Tax Saver Fund - Key Information Memorandum dated 21 Nov 2025",
+   "doc_type": "kim",
+   "scheme": "HDFC ELSS Tax Saver Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-elss-tax-saver-fund/direct"
+  },
+  {
+   "title": "HDFC Liquid Fund - Fund Facts (Factsheet) September 2026",
+   "doc_type": "factsheet",
+   "scheme": "HDFC Liquid Fund",
+   "as_of": "2026-08-31",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-liquid-fund/direct"
+  },
+  {
+   "title": "HDFC Liquid Fund - Key Information Memorandum dated 21 Nov 2025",
+   "doc_type": "kim",
+   "scheme": "HDFC Liquid Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-liquid-fund/direct"
+  },
+  {
+   "title": "HDFC Liquid Fund - Scheme Information Document dated 21 Nov 2025",
+   "doc_type": "sid",
+   "scheme": "HDFC Liquid Fund",
+   "as_of": "2025-11-21",
+   "url": "https://www.hdfcfund.com/explore/mutual-funds/hdfc-liquid-fund/direct"
+  }
+ ],
  "facts": [
   {
    "scheme": "HDFC Flexi Cap Fund",

@@ -26,6 +26,9 @@ python3 src/answer.py "What is the exit load?"   # CLI
 python3 eval/run_samples.py    # regenerate eval/sample_qa.md
 ```
 
+## Web UI (`web/index.html`)
+Single-file, dependency-free premium UI: light/dark themes (follows the OS, toggle persisted), scheme selector that fills in a missing scheme name, example question cards, structured answer cards (verified/refusal/clarify/not-found badges, source card with title, page and last-updated date, copy button, "answered via" tag), one-tap scheme choice when a question is ambiguous, Sources dialog, typing indicator, accessible (aria-live log, labels, focus rings, reduced-motion) and responsive. The local `src/server.py` page keeps its simple UI.
+
 ## Live RAG endpoint (Netlify Function)
 `netlify/functions/ask.mjs` (`POST /api/ask`) runs the full pipeline: guardrails -> curated facts (fast path) -> BM25 retrieval over `chunks.jsonl` (scheme-filtered, topic-boosted; port of `src/retriever.py`, same rankings) -> Claude writes a <=3-sentence answer from the top 4 chunks only -> **grounding check**: every number in the answer must appear in the chunk that is cited, otherwise the reply is "couldn't find that". The citation always comes from chunk metadata. The response includes `path` (`curated`, `retrieved`, `retrieved+llm`), shown on the page as "answered via".
 - **Setup:** in Netlify -> Site configuration -> Environment variables add `ANTHROPIC_API_KEY` (secret, server-side only). Optional `RAG_MODEL` (default `claude-haiku-4-5-20251001`). Without a key the function still works but uses a no-LLM extractive fallback, which is rougher.
