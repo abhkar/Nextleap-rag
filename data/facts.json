@@ -1,26 +1,193 @@
 [
-  {"id": "exit-load", "pattern": "exit\\s*load", "source_id": "fs", "page": 2,
-   "answer": "An exit load of 1.00% applies if units are redeemed or switched out within 1 year from the date of allotment. No exit load applies after 1 year.",
-   "quotes": ["Exit Load of 1.00% is payable if Units are redeemed / switched-out within 1 year from the date of allotment", "No Exit Load is payable if Units are redeemed / switched-out after 1 year"]},
-  {"id": "min-investment", "pattern": "minimum|\\bmin\\b|\\bsip\\b|systematic investment|how much (do|to) (i )?(need|invest)", "source_id": "sid", "page": 5,
-   "answer": "The minimum application amount (and minimum additional purchase) is Rs.100 and any amount thereafter. The documents do not state a separate minimum SIP instalment for this scheme.",
-   "quotes": ["XII. Minimum Application Rs.100/- and any amount thereafter", "XIII. Minimum Additional Rs.100/- and any amount thereafter"]},
-  {"id": "expense-ratio", "pattern": "expense|\\bter\\b|total expense", "source_id": "kim", "page": 21,
-   "answer": "The maximum Total Expense Ratio (Regulation 52(6)) is 2.25% p.a. on the first Rs.500 crore of daily net assets, falling in slabs to 1.05% p.a. on the balance. Current actual TER is published on the HDFC Mutual Fund website's TER page.",
-   "quotes": ["On the first Rs.500 crores of the daily net assets - 2.25% p.a.", "On balance of the assets - 1.05% p.a.", "total-expense-ratio-of-mutual-fund-schemes"]},
-  {"id": "benchmark", "pattern": "benchmark|\\bindex\\b", "source_id": "fs", "page": 2,
-   "answer": "The scheme's benchmark is the NIFTY 500 Index (Total Returns Index).",
-   "quotes": ["Benchmark NIFTY 500 Index (Total Returns Index)"]},
-  {"id": "riskometer", "pattern": "risk(o)?\\s?-?meter|risk level|how risky|risk of the scheme", "source_id": "fs", "page": 3,
-   "answer": "As of August 31, 2026 the scheme's riskometer reads 'Very High' (the risk of the scheme is very high). The latest riskometer is published in the monthly portfolio on the HDFC Mutual Fund website.",
-   "quotes": ["For latest Riskometer, investors may refer to the Monthly Portfolios", "Scheme riskometer as of August 31, 2026"], "manual": "The risk of the scheme is very high"},
-  {"id": "lock-in", "pattern": "lock[- ]?in|elss|80c|tax sav", "source_id": "sid", "page": 9,
-   "answer": "HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.",
-   "quotes": ["lock-in period, if any"]},
-  {"id": "statements", "pattern": "statement|\\bcas\\b|account summary", "source_id": "kim", "page": 22,
-   "answer": "The AMC sends an allotment confirmation by email/SMS within 5 working days of a valid transaction, and a monthly Consolidated Account Statement (CAS) on or before the 12th of the following month for folios with transactions. Step-by-step download instructions, including for capital-gains statements, are not in these documents.",
-   "quotes": ["within 5 working days of receipt of valid application", "on or before 12th of the succeeding month"]},
-  {"id": "category", "pattern": "category|type of (fund|scheme)|what kind|inception|launch", "source_id": "fs", "page": 2,
-   "answer": "HDFC Flexi Cap Fund is an open-ended dynamic equity scheme (category: Flexi Cap Fund) investing across large-, mid- and small-cap stocks, with an inception date of January 1, 1995.",
-   "quotes": ["Category of Scheme Flexi Cap Fund", "Inception Date January 1, 1995"]}
+ {
+  "id": "exit-load",
+  "pattern": "exit\\s*load",
+  "source_id": "fs",
+  "page": 2,
+  "answer": "An exit load of 1.00% applies if units are redeemed or switched out within 1 year from the date of allotment. No exit load applies after 1 year.",
+  "quotes": [
+   "Exit Load of 1.00% is payable if Units are redeemed / switched-out within 1 year from the date of allotment",
+   "No Exit Load is payable if Units are redeemed / switched-out after 1 year"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "min-investment",
+  "pattern": "minimum|\\bmin\\b|\\bsip\\b|systematic investment|how much (do|to) (i )?(need|invest)",
+  "source_id": "sid",
+  "page": 5,
+  "answer": "The minimum application amount (and minimum additional purchase) is Rs.100 and any amount thereafter. The documents do not state a separate minimum SIP instalment for this scheme.",
+  "quotes": [
+   "XII. Minimum Application Rs.100/- and any amount thereafter",
+   "XIII. Minimum Additional Rs.100/- and any amount thereafter"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "expense-ratio",
+  "pattern": "expense|\\bter\\b|total expense",
+  "source_id": "kim",
+  "page": 21,
+  "answer": "The maximum Total Expense Ratio (Regulation 52(6)) is 2.25% p.a. on the first Rs.500 crore of daily net assets, falling in slabs to 1.05% p.a. on the balance. Current actual TER is published on the HDFC Mutual Fund website's TER page.",
+  "quotes": [
+   "On the first Rs.500 crores of the daily net assets - 2.25% p.a.",
+   "On balance of the assets - 1.05% p.a.",
+   "total-expense-ratio-of-mutual-fund-schemes"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "benchmark",
+  "pattern": "benchmark|\\bindex\\b",
+  "source_id": "fs",
+  "page": 2,
+  "answer": "The scheme's benchmark is the NIFTY 500 Index (Total Returns Index).",
+  "quotes": [
+   "Benchmark NIFTY 500 Index (Total Returns Index)"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "riskometer",
+  "pattern": "risk(o)?\\s?-?meter|risk level|how risky|risk of the scheme",
+  "source_id": "fs",
+  "page": 3,
+  "answer": "As of August 31, 2026 the scheme's riskometer reads 'Very High' (the risk of the scheme is very high). The latest riskometer is published in the monthly portfolio on the HDFC Mutual Fund website.",
+  "quotes": [
+   "For latest Riskometer, investors may refer to the Monthly Portfolios",
+   "Scheme riskometer as of August 31, 2026"
+  ],
+  "manual": "The risk of the scheme is very high",
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "lock-in",
+  "pattern": "lock[- ]?in|elss|80c|tax sav",
+  "source_id": "sid",
+  "page": 9,
+  "answer": "HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.",
+  "quotes": [
+   "lock-in period, if any"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "statements",
+  "pattern": "statement|\\bcas\\b|account summary",
+  "source_id": "kim",
+  "page": 22,
+  "answer": "The AMC sends an allotment confirmation by email/SMS within 5 working days of a valid transaction, and a monthly Consolidated Account Statement (CAS) on or before the 12th of the following month for folios with transactions. Step-by-step download instructions, including for capital-gains statements, are not in these documents.",
+  "quotes": [
+   "within 5 working days of receipt of valid application",
+   "on or before 12th of the succeeding month"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "category",
+  "pattern": "category|type of (fund|scheme)|what kind|inception|launch",
+  "source_id": "fs",
+  "page": 2,
+  "answer": "HDFC Flexi Cap Fund is an open-ended dynamic equity scheme (category: Flexi Cap Fund) investing across large-, mid- and small-cap stocks, with an inception date of January 1, 1995.",
+  "quotes": [
+   "Category of Scheme Flexi Cap Fund",
+   "Inception Date January 1, 1995"
+  ],
+  "scheme": "HDFC Flexi Cap Fund"
+ },
+ {
+  "id": "exit-load",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "exit\\s*load",
+  "source_id": "mc_kim",
+  "page": 20,
+  "answer": "An exit load of 1.00% applies if units are redeemed or switched out within 1 year from the date of allotment. No exit load applies after 1 year.",
+  "quotes": [
+   "an Exit Load of 1.00% is payable",
+   "No Exit Load is payable if Units are redeemed / switched-out after 1 year"
+  ]
+ },
+ {
+  "id": "min-investment",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "minimum|\\bmin\\b|\\bsip\\b|systematic investment|how much (do|to) (i )?(need|invest)",
+  "source_id": "mc_sid",
+  "page": 5,
+  "answer": "The minimum application amount (and minimum additional purchase) is Rs.100 and any amount thereafter. The documents do not state a separate minimum SIP instalment for this scheme.",
+  "quotes": [
+   "XII. Minimum Application Rs.100/- and any amount thereafter",
+   "XIII. Minimum Additional Rs.100/- and any amount thereafter"
+  ]
+ },
+ {
+  "id": "expense-ratio",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "expense|\\bter\\b|total expense",
+  "source_id": "mc_kim",
+  "page": 21,
+  "answer": "The maximum Total Expense Ratio (Regulation 52(6)) is 2.25% p.a. on the first Rs.500 crore of daily net assets, falling in slabs to 1.05% p.a. on the balance. Current actual TER is published on the HDFC Mutual Fund website's TER page.",
+  "quotes": [
+   "On the first Rs.500 crores of the daily net assets - 2.25% p.a.",
+   "On balance of the assets - 1.05% p.a.",
+   "total-expense-ratio-of-mutual-fund-schemes"
+  ]
+ },
+ {
+  "id": "benchmark",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "benchmark|\\bindex\\b",
+  "source_id": "mc_kim",
+  "page": 18,
+  "answer": "The scheme's benchmark is the NIFTY MIDCAP 150 (TRI), its Total Returns Index.",
+  "quotes": [
+   "13. Benchmark Index NIFTY MIDCAP 150 (TRI)"
+  ]
+ },
+ {
+  "id": "riskometer",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "risk(o)?\\s?-?meter|risk level|how risky|risk of the scheme",
+  "source_id": "mc_leaflet",
+  "page": 2,
+  "answer": "As of May 31, 2026 the scheme's riskometer reads 'Very High' (the risk of the scheme is very high). The latest riskometer is published in the monthly portfolio on the HDFC Mutual Fund website.",
+  "quotes": [
+   "For latest riskometer, investors may refer to the Monthly Portfolios"
+  ],
+  "manual": "The risk of the scheme is very high"
+ },
+ {
+  "id": "lock-in",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "lock[- ]?in|elss|80c|tax sav",
+  "source_id": "mc_sid",
+  "page": 8,
+  "answer": "HDFC Mid Cap Fund is an open-ended equity scheme, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.",
+  "quotes": [
+   "lock-in period, if any"
+  ]
+ },
+ {
+  "id": "statements",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "statement|\\bcas\\b|account summary",
+  "source_id": "mc_kim",
+  "page": 22,
+  "answer": "The AMC sends an allotment confirmation by email/SMS within 5 working days of a valid transaction, and a monthly Consolidated Account Statement (CAS) on or before the 12th of the following month for folios with transactions. Step-by-step download instructions, including for capital-gains statements, are not in these documents.",
+  "quotes": [
+   "within 5 working days of receipt of valid application",
+   "on or before 12th of the succeeding month"
+  ]
+ },
+ {
+  "id": "category",
+  "scheme": "HDFC Mid Cap Fund",
+  "pattern": "category|type of (fund|scheme)|what kind|inception|launch",
+  "source_id": "mc_kim",
+  "page": 1,
+  "answer": "HDFC Mid Cap Fund (formerly HDFC Mid-Cap Opportunities Fund) is an open-ended equity scheme predominantly investing in mid cap stocks.",
+  "quotes": [
+   "An open ended equity scheme predominantly investing in mid cap stocks",
+   "Formerly known as HDFC Mid-Cap Opportunities Fund"
+  ]
+ }
 ]

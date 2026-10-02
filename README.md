@@ -1,11 +1,12 @@
 # MF FAQ Assistant (RAG, facts-only)
 
-A small, citation-first FAQ assistant for **HDFC Flexi Cap Fund** (HDFC Mutual Fund). Product context: Groww (answers use only AMC documents, never Groww pages).
+A small, citation-first FAQ assistant for **HDFC Flexi Cap Fund** and **HDFC Mid Cap Fund** (HDFC Mutual Fund). Product context: Groww (answers use only AMC documents, never Groww pages).
 It answers factual questions (exit load, minimum investment, expense ratio, benchmark, riskometer, statements) in <=3 sentences with **one source link** and a *"Last updated from sources"* date. It refuses advice/opinion questions, performance/returns questions, and anything containing PII.
 
 ## Scope
-- AMC: HDFC Mutual Fund. Scheme: **HDFC Flexi Cap Fund only** (the milestone allows 3-5; this build is deliberately narrowed to one).
-- Corpus: 5 official documents listed in [`sources.csv`](sources.csv) (factsheet Sep 2026, KIM and SID dated 21 Nov 2025, leaflet May 2026, presentation Jul 2026). **Below the 15-25 source target; see Known limits.**
+- AMC: HDFC Mutual Fund. Schemes: **HDFC Flexi Cap Fund** and **HDFC Mid Cap Fund** (the milestone allows 3-5; more can be added the same way).
+- Corpus: 8 official documents listed in [`sources.csv`](sources.csv): Flexi Cap factsheet (Sep 2026), KIM, SID (21 Nov 2025), leaflet (May 2026), presentation (Jul 2026); Mid Cap KIM, SID (21 Nov 2025) and leaflet (May 2026). **Below the 15-25 source target; see Known limits.**
+- Questions must name the scheme; otherwise the assistant asks which one (one scheme per question).
 
 ## How it works
 1. `src/ingest.py` - `pdftotext` -> ~90-word page-aware chunks -> `data/processed/chunks.jsonl`.
@@ -26,9 +27,10 @@ python3 eval/run_samples.py    # regenerate eval/sample_qa.md
 ```
 
 ## Known limits
+- The supplied Mid Cap KIM PDF was truncated (no trailer/xref); `data/raw/midcap_kim_2025-11-21.pdf` is that file with a trailer appended so the text could be extracted (24 pages, content unchanged). Re-download it from hdfcfund.com if possible.
 - **Citation URLs are not yet verified.** Documents were supplied as PDFs; `sources.csv` points to the scheme page on hdfcfund.com (`url_verified=no`). Replace with the exact document download links before submission.
 - Only 5 documents / 1 scheme; no SEBI/AMFI pages ingested (the build environment could not reach those hosts). The advice-refusal link points to SEBI investor education and is likewise unverified.
-- Riskometer is an image in the factsheet; its value was transcribed by hand (`data/manual_chunks.json`) and stated as of 31 Aug 2026.
-- No separate minimum-SIP amount or capital-gains-statement download steps appear in these documents; the assistant says so rather than guessing. ELSS lock-in is out of scope (no ELSS scheme in corpus).
+- Riskometers are images; values were transcribed by hand (`data/manual_chunks.json`): Flexi Cap 'very high' as of 31 Aug 2026 (factsheet), Mid Cap 'very high' as of 31 May 2026 (leaflet).
+- No separate minimum-SIP amount or capital-gains-statement download steps appear in these documents; the assistant says so rather than guessing. ELSS lock-in is out of scope (no ELSS scheme in corpus). No Mid Cap factsheet was supplied, so Mid Cap facts cite the KIM/SID/leaflet.
 - Figures (TER, exit load, riskometer) change; answers show the document date.
 - Rule-based routing can misclassify unusual phrasing.

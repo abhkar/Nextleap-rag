@@ -41,12 +41,14 @@ class Retriever:
                 return name
         return None
 
-    def search(self, query, k=4):
+    def search(self, query, k=4, scheme=None):
         q = tok(query)
         topic = self.topic(query)
         phrases, prefer = (TOPICS[topic][1], TOPICS[topic][2]) if topic else ([], [])
         scored = []
         for i, d in enumerate(self.docs):
+            if scheme and d["scheme"] != scheme:
+                continue
             tf, L = self.tf[i], self.len[i]
             s = sum(self.idf.get(t, 0) * tf[t] * 2.2 / (tf[t] + 1.2 * (.25 + .75 * L / self.avg)) for t in q if t in tf)
             if s <= 0:

@@ -3,7 +3,13 @@ import json, os, re, sys, urllib.request
 from guardrails import route, EDU_LINK, AMFI_LINK
 from retriever import Retriever, tok, ROOT
 
-SCHEME = "HDFC Flexi Cap Fund"
+SCHEMES = {"HDFC Flexi Cap Fund": r"flexi", "HDFC Mid Cap Fund": r"mid[\s-]?cap"}
+AMC_LINK = "https://www.hdfcfund.com/explore/mutual-funds"
+SCHEME = " / ".join(SCHEMES)
+
+
+def detect_schemes(query):
+    return [n for n, rx in SCHEMES.items() if re.search(rx, query, re.I)]
 MIN_SCORE = 6.0
 DISCLAIMER = "Facts-only. No investment advice."
 
@@ -68,10 +74,10 @@ class Assistant:
         for d in self.ret.docs:
             self.meta.setdefault(d["source_id"], d)
 
-    def fact_answer(self, query):
+    def fact_answer(self, query, scheme):
         """Curated, quote-verified facts (see tests/test_facts.py) take priority over free-form retrieval."""
         for f in FACTS:
-            if re.search(f["pattern"], query, re.I):
+            if f["scheme"] == scheme and re.search(f["pattern"], query, re.I):
                 doc = dict(self.meta[f["source_id"]], page=f["page"])
                 return _fmt(f["answer"], doc=doc)
 
@@ -84,18 +90,25 @@ class Assistant:
         if r == "advice":
             return _fmt("I can only share facts from official documents, so I can't advise on whether to buy, sell or hold, "
                         "or which fund is better. For investing basics, see the investor education resources below.", link=EDU_LINK, kind="refusal")
-        fact = self.fact_answer(query)
+        found = detect_schemes(query)
+        if len(found) != 1:
+            names = " or ".join(SCHEMES)
+            msg = f"Which scheme do you mean: {names}?" if not found else "Please ask about one scheme at a time, and I will answer from its official documents."
+            return _fmt(msg + " I can answer one scheme per question.", link=AMC_LINK, kind="clarify")
+        scheme = found[0]
+        if r == "performance":
+            doc = next((d for _, d in self.ret.search("performance returns", 8, scheme=scheme)[0]
+                        if d["doc_type"] in ("factsheet", "leaflet")), None)
+            return _fmt("I don't calculate or compare returns. Please see the scheme's official factsheet or leaflet for performance data.",
+                        doc=doc, link=None if doc else AMC_LINK, kind="refusal")
+        fact = self.fact_answer(query, scheme)
         if fact:
             return fact
-        hits, topic = self.ret.search(query + " " + SCHEME, k=3)
+        hits, topic = self.ret.search(query + " " + scheme, k=3, scheme=scheme)
         top = hits[0][1] if hits else None
-        if r == "performance":
-            doc = next((d for _, d in self.ret.search("factsheet performance", 5)[0] if d["doc_type"] == "factsheet"), top)
-            return _fmt("I don't calculate or compare returns. Please see the scheme's official factsheet for performance data.",
-                        doc=doc, kind="refusal")
         if not hits or hits[0][0] < MIN_SCORE:
-            return _fmt("I couldn't find that in the official documents I have for HDFC Flexi Cap Fund.",
-                        link="https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/regular", kind="no_answer")
+            return _fmt("I couldn't find that in the official documents I have for " + scheme + ".",
+                        link=self.meta[hits[0][1]["source_id"]]["url"] if hits else AMC_LINK, kind="no_answer")
         text = llm_answer(query, [d for _, d in hits]) or extractive(query, top, topic)
         return _fmt(text, doc=top)
 

@@ -1,4 +1,12 @@
 [
-  {"source_id": "fs", "page": 3,
-   "text": "Riskometer (transcribed from the factsheet's riskometer graphic, which is an image): HDFC Flexi Cap Fund scheme riskometer as of August 31, 2026 - The risk of the scheme is very high (Very High risk). Product labelling: suitable for investors seeking long term capital appreciation/income and investment predominantly in equity & equity related instruments."}
+ {
+  "source_id": "fs",
+  "page": 3,
+  "text": "Riskometer (transcribed from the factsheet's riskometer graphic, which is an image): HDFC Flexi Cap Fund scheme riskometer as of August 31, 2026 - The risk of the scheme is very high (Very High risk). Product labelling: suitable for investors seeking long term capital appreciation/income and investment predominantly in equity & equity related instruments."
+ },
+ {
+  "source_id": "mc_leaflet",
+  "page": 2,
+  "text": "Riskometer (transcribed from the leaflet's riskometer graphic, which is an image): HDFC Mid Cap Fund scheme riskometer as of May 31, 2026 - The risk of the scheme is very high (Very High risk). The risk of the benchmark NIFTY MIDCAP 150 (TRI) is also very high."
+ }
 ]

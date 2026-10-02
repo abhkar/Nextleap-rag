@@ -33,14 +33,24 @@ class Behaviour(unittest.TestCase):
         self.assertEqual(route("3 year returns?")[0], "performance")
         self.assertEqual(route("What is the exit load?")[0], "factual")
 
+    def test_scheme_specific_answers(self):
+        a = self.a
+        self.assertIn("NIFTY 500", a.ask("benchmark of HDFC Flexi Cap Fund")["answer"])
+        self.assertIn("NIFTY MIDCAP 150", a.ask("benchmark of HDFC Mid Cap Fund")["answer"])
+        self.assertIn("May 31, 2026", a.ask("riskometer of mid cap fund")["answer"])
+        self.assertEqual(a.ask("what is the exit load?")["kind"], "clarify")
+        self.assertEqual(a.ask("compare exit load of flexi cap and mid cap")["kind"], "clarify")
+        self.assertEqual(a.ask("benchmark returns of mid cap fund")["kind"], "refusal")
+
     def test_every_answer_has_one_link(self):
-        for q in ["What is the exit load?", "Expense ratio?", "Should I sell?", "3 year return?", "random unknown thing xyz"]:
+        for q in ["Exit load of flexi cap?", "Expense ratio of mid cap?", "Should I sell?", "3 year return of mid cap?", "random unknown thing xyz", "unknown xyz mid cap fund"]:
             ans = self.a.ask(q)["answer"]
             self.assertEqual(len(re.findall(r"https?://", ans)), 1, q)
 
     def test_answer_sentence_limit(self):
-        for q in ["exit load", "minimum sip", "expense ratio", "benchmark", "riskometer", "lock-in", "statement"]:
-            body = self.a.ask(q)["answer"].split("\n\nSource:")[0]
+        for q in ["exit load", "minimum sip", "expense ratio", "benchmark", "riskometer", "lock-in", "statement", "category"]:
+          for sc in ("flexi cap fund", "mid cap fund"):
+            body = self.a.ask(f"{q} of {sc}")["answer"].split("\n\nSource:")[0]
             self.assertLessEqual(len(re.findall(r"[.!?](?:\s+[A-Z'(]|$)", body)), 3, q)
 
 

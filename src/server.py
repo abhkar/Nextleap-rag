@@ -3,7 +3,7 @@ import html, json, re, sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from answer import Assistant, DISCLAIMER, SCHEME
 
-EXAMPLES = ["What is the exit load of HDFC Flexi Cap Fund?", "What is the minimum SIP amount?", "What is the scheme's benchmark and riskometer?"]
+EXAMPLES = ["What is the exit load of HDFC Flexi Cap Fund?", "What is the benchmark of HDFC Mid Cap Fund?", "What is the riskometer level of HDFC Mid Cap Fund?"]
 PAGE = """<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MF FAQ Assistant</title><style>
 :root{--bg:#fff;--fg:#1b1f24;--mute:#59636e;--card:#f4f6f8;--acc:#0b5cab;--bd:#d8dee4}
@@ -15,7 +15,7 @@ border-radius:16px;background:var(--card);color:var(--fg);cursor:pointer}#log{ma
 form{display:flex;gap:8px}input{flex:1;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--fg)}
 form button{padding:10px 16px;border:0;border-radius:8px;background:var(--acc);color:var(--bg);cursor:pointer}.note{margin-top:16px;font-weight:600}</style>
 <main><h1>Mutual Fund FAQ Assistant</h1>
-<p>Hi! Ask me factual questions about <b>%(scheme)s</b>, answered only from official HDFC Mutual Fund documents.</p>
+<p>Hi! Ask me factual questions about <b>%(scheme)s</b> (name the scheme in your question), answered only from official HDFC Mutual Fund documents.</p>
 <div class="chips">%(chips)s</div><div id="log"></div>
 <form id="f"><input id="q" maxlength="300" placeholder="Ask a factual question..." autocomplete="off"><button>Ask</button></form>
 <p class="note">%(disc)s</p><p class="mute">Please don't enter PAN, Aadhaar, account numbers, OTPs, emails or phone numbers.</p></main>
