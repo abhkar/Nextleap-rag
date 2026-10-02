@@ -31,7 +31,7 @@ python3 eval/run_samples.py    # regenerate eval/sample_qa.md
 
 ## Known limits
 - The supplied Mid Cap KIM PDF was truncated (no trailer/xref); `data/raw/midcap_kim_2025-11-21.pdf` is that file with a trailer appended so the text could be extracted (24 pages, content unchanged). Re-download it from hdfcfund.com if possible.
-- **Citation URLs are not yet verified.** Documents were supplied as PDFs; `sources.csv` points to the scheme page on hdfcfund.com (`url_verified=no`). Replace with the exact document download links before submission.
+- **Citation URLs are scheme pages, not direct document links.** `sources.csv` uses the hdfcfund.com scheme (Direct plan) pages supplied by the project owner (`url_verified=provided`); they were not machine-checked because hdfcfund.com is unreachable from the build environment. `data/pending_sources.md` lists the HDFC ELSS Tax Saver page, which still needs its documents ingested.
 - Only 5 documents / 1 scheme; no SEBI/AMFI pages ingested (the build environment could not reach those hosts). The advice-refusal link points to SEBI investor education and is likewise unverified.
 - Riskometers are images; values were transcribed by hand (`data/manual_chunks.json`): Flexi Cap 'very high' as of 31 Aug 2026 (factsheet), Mid Cap 'very high' as of 31 May 2026 (leaflet).
 - No separate minimum-SIP amount or capital-gains-statement download steps appear in these documents; the assistant says so rather than guessing. ELSS lock-in is out of scope (no ELSS scheme in corpus). No Mid Cap factsheet was supplied, so Mid Cap facts cite the KIM/SID/leaflet.

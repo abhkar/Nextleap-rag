@@ -5,7 +5,7 @@
 
 > An exit load of 1.00% applies if units are redeemed or switched out within 1 year from the date of allotment. No exit load applies after 1 year.
 > 
-> Source: HDFC Flexi Cap Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/regular
+> Source: HDFC Flexi Cap Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct
 > Last updated from sources: 2026-08-31
 
 ## 2. What is the minimum SIP amount for HDFC Mid Cap Fund?
@@ -13,7 +13,7 @@
 
 > The minimum application amount (and minimum additional purchase) is Rs.100 and any amount thereafter. The documents do not state a separate minimum SIP instalment for this scheme.
 > 
-> Source: HDFC Mid Cap Fund - Scheme Information Document dated 21 Nov 2025 (p.5) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/regular
+> Source: HDFC Mid Cap Fund - Scheme Information Document dated 21 Nov 2025 (p.5) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct
 > Last updated from sources: 2025-11-21
 
 ## 3. What is the expense ratio of HDFC Mid Cap Fund?
@@ -21,7 +21,7 @@
 
 > The maximum Total Expense Ratio (Regulation 52(6)) is 2.25% p.a. on the first Rs.500 crore of daily net assets, falling in slabs to 1.05% p.a. on the balance. Current actual TER is published on the HDFC Mutual Fund website's TER page.
 > 
-> Source: HDFC Mid Cap Fund - Key Information Memorandum dated 21 Nov 2025 (p.21) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/regular
+> Source: HDFC Mid Cap Fund - Key Information Memorandum dated 21 Nov 2025 (p.21) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct
 > Last updated from sources: 2025-11-21
 
 ## 4. What is the benchmark of HDFC Flexi Cap Fund?
@@ -29,7 +29,7 @@
 
 > The scheme's benchmark is the NIFTY 500 Index (Total Returns Index).
 > 
-> Source: HDFC Flexi Cap Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/regular
+> Source: HDFC Flexi Cap Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct
 > Last updated from sources: 2026-08-31
 
 ## 5. What is the riskometer level of HDFC Mid Cap Fund?
@@ -37,7 +37,7 @@
 
 > As of May 31, 2026 the scheme's riskometer reads 'Very High' (the risk of the scheme is very high). The latest riskometer is published in the monthly portfolio on the HDFC Mutual Fund website.
 > 
-> Source: HDFC Mid Cap Fund - Leaflet May 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/regular
+> Source: HDFC Mid Cap Fund - Leaflet May 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct
 > Last updated from sources: 2026-05-31
 
 ## 6. Is there a lock-in period for HDFC Flexi Cap Fund? Is it an ELSS?
@@ -45,7 +45,7 @@
 
 > HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.
 > 
-> Source: HDFC Flexi Cap Fund - Scheme Information Document dated 21 Nov 2025 (p.9) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/regular
+> Source: HDFC Flexi Cap Fund - Scheme Information Document dated 21 Nov 2025 (p.9) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct
 > Last updated from sources: 2025-11-21
 
 ## 7. How do I download my capital gains statement for HDFC Mid Cap Fund?
@@ -53,7 +53,7 @@
 
 > The AMC sends an allotment confirmation by email/SMS within 5 working days of a valid transaction, and a monthly Consolidated Account Statement (CAS) on or before the 12th of the following month for folios with transactions. Step-by-step download instructions, including for capital-gains statements, are not in these documents.
 > 
-> Source: HDFC Mid Cap Fund - Key Information Memorandum dated 21 Nov 2025 (p.22) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/regular
+> Source: HDFC Mid Cap Fund - Key Information Memorandum dated 21 Nov 2025 (p.22) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-mid-cap-fund/direct
 > Last updated from sources: 2025-11-21
 
 ## 8. Should I buy HDFC Mid Cap Fund now?
@@ -68,7 +68,8 @@
 
 > I don't calculate or compare returns. Please see the scheme's official factsheet or leaflet for performance data.
 > 
-> Learn more: https://www.hdfcfund.com/explore/mutual-funds
+> Source: HDFC Flexi Cap Fund - Fund Facts (Factsheet) September 2026 - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct
+> Last updated from sources: 2026-08-31
 
 ## 10. My PAN is ABCDE1234F, what is the exit load?
 *Type: refusal*
