@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 import guardrails as g
-from answer import SCHEMES, AMC_LINK, DISCLAIMER
+from answer import SCHEMES, WEAK, AMC_LINK, DISCLAIMER
 
 src = {r["id"]: r for r in csv.DictReader(open(ROOT / "sources.csv"))}
 facts = []
@@ -16,7 +16,7 @@ perf = {}
 for r in src.values():
     if r["doc_type"] in ("factsheet", "leaflet"):
         perf.setdefault(r["scheme"], r)
-data = {"disclaimer": DISCLAIMER, "schemes": SCHEMES, "amc_link": AMC_LINK, "edu_link": g.EDU_LINK, "amfi_link": g.AMFI_LINK,
+data = {"disclaimer": DISCLAIMER, "schemes": SCHEMES, "weak": WEAK, "amc_link": AMC_LINK, "edu_link": g.EDU_LINK, "amfi_link": g.AMFI_LINK,
         "pii": {k: rx.pattern for k, rx in g.PII.items()}, "advice": g.ADVICE.pattern, "performance": g.PERFORMANCE.pattern,
         "perf_docs": {k: {"title": v["title"], "url": v["url"], "as_of": v["as_of"]} for k, v in perf.items()},
         "facts": facts}

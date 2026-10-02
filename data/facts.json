@@ -65,7 +65,7 @@
   "pattern": "lock[- ]?in|elss|80c|tax sav",
   "source_id": "sid",
   "page": 9,
-  "answer": "HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.",
+  "answer": "HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. For an ELSS (tax-saver) scheme, ask about HDFC ELSS Tax Saver Fund.",
   "quotes": [
    "lock-in period, if any"
   ],
@@ -161,7 +161,7 @@
   "pattern": "lock[- ]?in|elss|80c|tax sav",
   "source_id": "mc_sid",
   "page": 8,
-  "answer": "HDFC Mid Cap Fund is an open-ended equity scheme, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.",
+  "answer": "HDFC Mid Cap Fund is an open-ended equity scheme, and its documents mention a lock-in only as 'if any' without stating one for this scheme. For an ELSS (tax-saver) scheme, ask about HDFC ELSS Tax Saver Fund.",
   "quotes": [
    "lock-in period, if any"
   ]
@@ -188,6 +188,102 @@
   "quotes": [
    "An open ended equity scheme predominantly investing in mid cap stocks",
    "Formerly known as HDFC Mid-Cap Opportunities Fund"
+  ]
+ },
+ {
+  "id": "lock-in",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "lock[- ]?in|\\b80c\\b|tax benefit|statutory",
+  "source_id": "elss_fs",
+  "page": 2,
+  "answer": "HDFC ELSS Tax Saver Fund is an open-ended equity linked savings scheme with a statutory lock-in of 3 years, and it offers a tax benefit.",
+  "quotes": [
+   "statutory lock in of 3 years"
+  ]
+ },
+ {
+  "id": "exit-load",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "exit\\s*load",
+  "source_id": "elss_fs",
+  "page": 2,
+  "answer": "The exit load is Nil for this scheme.",
+  "quotes": [
+   "Exit Load Nil"
+  ]
+ },
+ {
+  "id": "min-investment",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "minimum|\\bmin\\b|\\bsip\\b|systematic investment|how much (do|to) (i )?(need|invest)",
+  "source_id": "elss_kim",
+  "page": 17,
+  "answer": "The minimum application amount and the minimum additional purchase are Rs.500, in multiples of Rs.500 thereafter. The documents do not state a separate minimum SIP instalment for this scheme.",
+  "quotes": [
+   "Rs. 500/- and in multiples of",
+   "Rs. 500 thereafter."
+  ]
+ },
+ {
+  "id": "expense-ratio",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "expense|\\bter\\b|total expense",
+  "source_id": "elss_kim",
+  "page": 20,
+  "answer": "The maximum Total Expense Ratio (Regulation 52(6)) is 2.25% p.a. on the first Rs.500 crore of daily net assets, falling in slabs to 1.05% p.a. on the balance. Current actual TER is published on the HDFC Mutual Fund website's TER page.",
+  "quotes": [
+   "On the first Rs.500 crores of the daily net assets - 2.25% p.a.",
+   "On balance of the assets - 1.05% p.a.",
+   "total-expense-ratio-of-mutual-fund-schemes"
+  ]
+ },
+ {
+  "id": "benchmark",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "benchmark|\\bindex\\b",
+  "source_id": "elss_fs",
+  "page": 2,
+  "answer": "The scheme's benchmark is the NIFTY 500 Index (Total Returns Index).",
+  "quotes": [
+   "Benchmark NIFTY 500 Index (Total Returns Index)"
+  ]
+ },
+ {
+  "id": "riskometer",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "risk(o)?\\s?-?meter|risk level|how risky|risk of the scheme",
+  "source_id": "elss_fs",
+  "page": 2,
+  "answer": "As of August 31, 2026 the scheme's riskometer reads 'Very High' (the risk of the scheme is very high). The latest riskometer is published in the monthly portfolio on the HDFC Mutual Fund website.",
+  "quotes": [
+   "For latest Riskometer, investors may refer to the Monthly Portfolios",
+   "Scheme riskometer as of August 31, 2026"
+  ],
+  "manual": "The risk of the scheme is very high"
+ },
+ {
+  "id": "statements",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "statement|\\bcas\\b|account summary",
+  "source_id": "elss_kim",
+  "page": 21,
+  "answer": "The AMC sends an allotment confirmation by email/SMS within 5 working days of a valid transaction, and a monthly Consolidated Account Statement (CAS) on or before the 12th of the following month for folios with transactions. Step-by-step download instructions, including for capital-gains statements, are not in these documents.",
+  "quotes": [
+   "within 5 working days of receipt of valid application",
+   "on or before 12th of the succeeding month"
+  ]
+ },
+ {
+  "id": "category",
+  "scheme": "HDFC ELSS Tax Saver Fund",
+  "pattern": "category|type of (fund|scheme)|what kind|inception|launch",
+  "source_id": "elss_fs",
+  "page": 2,
+  "answer": "HDFC ELSS Tax Saver Fund (renamed from HDFC ELSS Tax saver w.e.f. 26 August 2026) is an ELSS - Tax Saver Fund with an inception date of March 31, 1996.",
+  "quotes": [
+   "Category of Scheme ELSS - TAX SAVER FUND",
+   "Inception Date March 31, 1996",
+   "scheme name changed w.e.f 26th August 2026"
   ]
  }
 ]

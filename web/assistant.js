@@ -16,7 +16,8 @@
         return fmt(`Please don't share personal or account details such as ${pii.join(", ")}. I can't accept or store them. Ask a general question about the scheme instead.`, null, D.amfi_link, "refusal");
       if (rx(D.advice).test(query))
         return fmt("I can only share facts from official documents, so I can't advise on whether to buy, sell or hold, or which fund is better. For investing basics, see the investor education resources below.", null, D.edu_link, "refusal");
-      const found = Object.keys(D.schemes).filter((n) => rx(D.schemes[n]).test(query));
+      let found = Object.keys(D.schemes).filter((n) => rx(D.schemes[n]).test(query));
+      if (!found.length) found = Object.keys(D.weak).filter((n) => rx(D.weak[n]).test(query));
       if (found.length !== 1) {
         const msg = found.length ? "Please ask about one scheme at a time, and I will answer from its official documents." : `Which scheme do you mean: ${Object.keys(D.schemes).join(" or ")}?`;
         return fmt(msg + " I can answer one scheme per question.", null, D.amc_link, "clarify");

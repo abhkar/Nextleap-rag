@@ -3,7 +3,7 @@ import html, json, os, re, sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from answer import Assistant, DISCLAIMER, SCHEME
 
-EXAMPLES = ["What is the exit load of HDFC Flexi Cap Fund?", "What is the benchmark of HDFC Mid Cap Fund?", "What is the riskometer level of HDFC Mid Cap Fund?"]
+EXAMPLES = ["What is the exit load of HDFC Flexi Cap Fund?", "What is the benchmark of HDFC Mid Cap Fund?", "What is the lock-in period of HDFC ELSS Tax Saver Fund?"]
 PAGE = """<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MF FAQ Assistant</title><style>
 :root{--bg:#fff;--fg:#1b1f24;--mute:#59636e;--card:#f4f6f8;--acc:#0b5cab;--bd:#d8dee4}

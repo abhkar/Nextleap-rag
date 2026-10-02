@@ -43,7 +43,7 @@
 ## 6. Is there a lock-in period for HDFC Flexi Cap Fund? Is it an ELSS?
 *Type: answer*
 
-> HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. ELSS (tax-saver) schemes are not covered in my sources.
+> HDFC Flexi Cap Fund is categorised as a Flexi Cap Fund, and its documents mention a lock-in only as 'if any' without stating one for this scheme. For an ELSS (tax-saver) scheme, ask about HDFC ELSS Tax Saver Fund.
 > 
 > Source: HDFC Flexi Cap Fund - Scheme Information Document dated 21 Nov 2025 (p.9) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-flexi-cap-fund/direct
 > Last updated from sources: 2025-11-21
@@ -78,9 +78,25 @@
 > 
 > Learn more: https://www.amfiindia.com/investor-corner/knowledge-center
 
-## 11. What is the exit load?
+## 11. What is the lock-in period of HDFC ELSS Tax Saver Fund?
+*Type: answer*
+
+> HDFC ELSS Tax Saver Fund is an open-ended equity linked savings scheme with a statutory lock-in of 3 years, and it offers a tax benefit.
+> 
+> Source: HDFC ELSS Tax Saver Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-elss-tax-saver-fund/direct
+> Last updated from sources: 2026-08-31
+
+## 12. What is the exit load of HDFC ELSS Tax Saver Fund?
+*Type: answer*
+
+> The exit load is Nil for this scheme.
+> 
+> Source: HDFC ELSS Tax Saver Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-elss-tax-saver-fund/direct
+> Last updated from sources: 2026-08-31
+
+## 13. What is the exit load?
 *Type: clarify*
 
-> Which scheme do you mean: HDFC Flexi Cap Fund or HDFC Mid Cap Fund? I can answer one scheme per question.
+> Which scheme do you mean: HDFC Flexi Cap Fund or HDFC Mid Cap Fund or HDFC ELSS Tax Saver Fund? I can answer one scheme per question.
 > 
 > Learn more: https://www.hdfcfund.com/explore/mutual-funds

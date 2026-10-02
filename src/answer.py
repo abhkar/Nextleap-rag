@@ -3,13 +3,16 @@ import json, os, re, sys, urllib.request
 from guardrails import route, EDU_LINK, AMFI_LINK
 from retriever import Retriever, tok, ROOT
 
-SCHEMES = {"HDFC Flexi Cap Fund": r"flexi", "HDFC Mid Cap Fund": r"mid[\s-]?cap"}
+SCHEMES = {"HDFC Flexi Cap Fund": r"flexi", "HDFC Mid Cap Fund": r"mid[\s-]?cap", "HDFC ELSS Tax Saver Fund": r"tax[\s-]?saver|hdfc elss"}
+# A bare "ELSS" / "80C" mention selects the ELSS scheme only when no scheme is named explicitly
+WEAK = {"HDFC ELSS Tax Saver Fund": r"\belss\b|\b80c\b"}
 AMC_LINK = "https://www.hdfcfund.com/explore/mutual-funds"
 SCHEME = " / ".join(SCHEMES)
 
 
 def detect_schemes(query):
-    return [n for n, rx in SCHEMES.items() if re.search(rx, query, re.I)]
+    found = [n for n, rx in SCHEMES.items() if re.search(rx, query, re.I)]
+    return found or [n for n, rx in WEAK.items() if re.search(rx, query, re.I)]
 MIN_SCORE = 6.0
 DISCLAIMER = "Facts-only. No investment advice."
 

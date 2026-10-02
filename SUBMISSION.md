@@ -2,7 +2,7 @@
 | Deliverable | Where | Status |
 |---|---|---|
 | Working prototype | Static build in `web/` (Netlify: `netlify.toml`); also `python3 src/server.py` locally | Runs locally; **hosting link still to be created** (or record DEMO.md as a <=3 min video) |
-| Source list | `sources.csv` | 8 documents (target 15-25); URLs supplied by owner (`url_verified=provided`), not machine-checked |
+| Source list | `sources.csv` | 10 documents (target 15-25); URLs supplied by owner (`url_verified=provided`), not machine-checked |
 | README | `README.md` | Done: setup, scope, known limits |
 | Sample Q&A | `eval/sample_qa.md` | 11 queries incl. refusals |
 | Disclaimer snippet | `DISCLAIMER.md` (UI shows "Facts-only. No investment advice.") | Done |
