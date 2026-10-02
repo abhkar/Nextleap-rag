@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MF FAQ Assistant</title><style>
+:root{--bg:#fff;--fg:#1b1f24;--mute:#59636e;--card:#f4f6f8;--acc:#0b5cab;--bd:#d8dee4}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1318;--fg:#e6edf3;--mute:#9aa4af;--card:#1a2028;--acc:#6cb2ff;--bd:#2d333b}}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif;margin:0}main{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.4rem;margin:0 0 4px}.mute{color:var(--mute);font-size:.9rem}.chips button{margin:6px 6px 0 0;padding:6px 12px;border:1px solid var(--bd);
+border-radius:16px;background:var(--card);color:var(--fg);cursor:pointer}#log{margin:20px 0}.q{font-weight:600;margin-top:16px}
+.a{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:10px 14px;white-space:pre-wrap;word-break:break-word}a{color:var(--acc)}
+form{display:flex;gap:8px}input{flex:1;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--fg);font-size:16px}
+form button{padding:10px 16px;border:0;border-radius:8px;background:var(--acc);color:var(--bg);cursor:pointer}.note{margin-top:16px;font-weight:600}</style>
+<main><h1>Mutual Fund FAQ Assistant</h1>
+<p>Hi! Ask me factual questions about <b>HDFC Flexi Cap Fund</b> or <b>HDFC Mid Cap Fund</b> (name the scheme in your question), answered only from official HDFC Mutual Fund documents.</p>
+<div class="chips">
+<button type="button">What is the exit load of HDFC Flexi Cap Fund?</button>
+<button type="button">What is the benchmark of HDFC Mid Cap Fund?</button>
+<button type="button">What is the riskometer level of HDFC Mid Cap Fund?</button></div>
+<div id="log"></div>
+<form id="f"><input id="q" maxlength="300" placeholder="Ask a factual question..." autocomplete="off"><button>Ask</button></form>
+<p class="note">Facts-only. No investment advice.</p>
+<p class="mute">Please don't enter PAN, Aadhaar, account numbers, OTPs, emails or phone numbers. Nothing you type is stored or sent anywhere.</p></main>
+<script src="assistant.js"></script>
+<script>
+let A; const log=document.getElementById('log'),q=document.getElementById('q');
+fetch('data.json').then(r=>r.json()).then(D=>{A=makeAssistant(D)});
+const esc=t=>t.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const linkify=t=>t.replace(/(https?:\/\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
+function ask(text){if(!text.trim()||!A)return;const d=document.createElement('div');
+d.innerHTML='<div class="q"></div><div class="a"></div>';d.firstChild.textContent=text;d.lastChild.innerHTML=linkify(esc(A.ask(text).answer));
+log.appendChild(d);q.value=''}
+document.getElementById('f').onsubmit=e=>{e.preventDefault();ask(q.value)};
+document.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>ask(b.textContent));
+</script></html>

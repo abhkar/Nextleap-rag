@@ -1,7 +1,7 @@
 # Submission checklist
 | Deliverable | Where | Status |
 |---|---|---|
-| Working prototype | `python3 src/server.py` (Procfile/Dockerfile included for Render/Railway/HF Spaces) | Runs locally; **hosting link still to be created** (or record DEMO.md as a <=3 min video) |
+| Working prototype | Static build in `web/` (Netlify: `netlify.toml`); also `python3 src/server.py` locally | Runs locally; **hosting link still to be created** (or record DEMO.md as a <=3 min video) |
 | Source list | `sources.csv` | 8 documents (target 15-25); **URLs unverified** (`url_verified=no`) |
 | README | `README.md` | Done: setup, scope, known limits |
 | Sample Q&A | `eval/sample_qa.md` | 11 queries incl. refusals |

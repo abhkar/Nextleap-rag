@@ -26,7 +26,7 @@ def _fmt(answer, doc=None, link=None, kind="answer"):
     as_of = doc["as_of"] if doc else None
     text = answer.strip()
     if doc:
-        text += f"\n\nSource: {doc['title']} (p.{doc['page']}) - {link}\nLast updated from sources: {as_of}"
+        text += f"\n\nSource: {doc['title']}{' (p.%s)' % doc['page'] if doc.get('page') else ''} - {link}\nLast updated from sources: {as_of}"
     else:
         text += f"\n\nLearn more: {link}"
     return {"kind": kind, "answer": text, "link": link, "last_updated": as_of}
@@ -97,8 +97,8 @@ class Assistant:
             return _fmt(msg + " I can answer one scheme per question.", link=AMC_LINK, kind="clarify")
         scheme = found[0]
         if r == "performance":
-            doc = next((d for _, d in self.ret.search("performance returns", 8, scheme=scheme)[0]
-                        if d["doc_type"] in ("factsheet", "leaflet")), None)
+            doc = next((dict(d, page=None) for d in self.meta.values()
+                        if d["scheme"] == scheme and d["doc_type"] in ("factsheet", "leaflet")), None)
             return _fmt("I don't calculate or compare returns. Please see the scheme's official factsheet or leaflet for performance data.",
                         doc=doc, link=None if doc else AMC_LINK, kind="refusal")
         fact = self.fact_answer(query, scheme)
