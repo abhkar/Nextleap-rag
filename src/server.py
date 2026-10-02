@@ -1,5 +1,5 @@
 """Tiny dependency-free web UI: python3 src/server.py  ->  http://localhost:8000"""
-import html, json, re, sys
+import html, json, os, re, sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from answer import Assistant, DISCLAIMER, SCHEME
 
@@ -51,6 +51,6 @@ class H(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
+    port = int(sys.argv[1]) if len(sys.argv) > 1 else int(os.environ.get("PORT", 8000))
     print(f"Serving on http://localhost:{port}")
     ThreadingHTTPServer(("0.0.0.0", port), H).serve_forever()

@@ -21,7 +21,7 @@ Requires Python 3.9+ and `pdftotext` (poppler-utils). No pip packages.
 ```
 python3 src/ingest.py          # rebuild chunks from sources.csv
 python3 -m unittest discover -s tests
-python3 src/server.py          # http://localhost:8000
+python3 src/server.py          # http://localhost:8000 (honours $PORT; Procfile and Dockerfile included for hosting)
 python3 src/answer.py "What is the exit load?"   # CLI
 python3 eval/run_samples.py    # regenerate eval/sample_qa.md
 ```
