@@ -8,7 +8,7 @@ from answer import Assistant
 QS = ["What is the exit load of HDFC Flexi Cap Fund?", "minimum sip for mid cap fund", "expense ratio of HDFC Mid Cap Fund",
       "benchmark of flexi cap fund", "riskometer of mid cap", "lock-in for flexi cap", "statement for mid cap fund",
       "Should I buy HDFC Mid Cap Fund now?", "3 year returns of flexi cap", "my PAN ABCDE1234F exit load", "what is the exit load?",
-      "compare flexi cap and mid cap exit load", "ELSS lock-in period?", "exit load of tax saver", "is flexi cap an ELSS?", "tax saver minimum sip"]
+      "compare flexi cap and mid cap exit load", "ELSS lock-in period?", "exit load of tax saver", "is flexi cap an ELSS?", "tax saver minimum sip", "exit load of liquid fund", "liquid fund riskometer", "returns of liquid fund"]
 JS = """const {makeAssistant}=require('./web/assistant.js');const D=require('./web/data.json');
 const a=makeAssistant(D);console.log(JSON.stringify(JSON.parse(process.argv[1]).map(q=>a.ask(q))));"""
 

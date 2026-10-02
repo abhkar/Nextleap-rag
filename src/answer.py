@@ -3,7 +3,7 @@ import json, os, re, sys, urllib.request
 from guardrails import route, EDU_LINK, AMFI_LINK
 from retriever import Retriever, tok, ROOT
 
-SCHEMES = {"HDFC Flexi Cap Fund": r"flexi", "HDFC Mid Cap Fund": r"mid[\s-]?cap", "HDFC ELSS Tax Saver Fund": r"tax[\s-]?saver|hdfc elss"}
+SCHEMES = {"HDFC Flexi Cap Fund": r"flexi", "HDFC Mid Cap Fund": r"mid[\s-]?cap", "HDFC ELSS Tax Saver Fund": r"tax[\s-]?saver|hdfc elss", "HDFC Liquid Fund": r"\bliquid\b"}
 # A bare "ELSS" / "80C" mention selects the ELSS scheme only when no scheme is named explicitly
 WEAK = {"HDFC ELSS Tax Saver Fund": r"\belss\b|\b80c\b"}
 AMC_LINK = "https://www.hdfcfund.com/explore/mutual-funds"

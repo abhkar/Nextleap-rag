@@ -94,9 +94,25 @@
 > Source: HDFC ELSS Tax Saver Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-elss-tax-saver-fund/direct
 > Last updated from sources: 2026-08-31
 
-## 13. What is the exit load?
+## 13. What is the exit load of HDFC Liquid Fund?
+*Type: answer*
+
+> For investments made on or after October 20, 2019, the exit load is graded: 0.0070% if redeemed on Day 1, falling by 0.0005% each day to 0.0045% on Day 6, and Nil from Day 7 onwards. Investments made on or before October 19, 2019 have no exit load.
+> 
+> Source: HDFC Liquid Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-liquid-fund/direct
+> Last updated from sources: 2026-08-31
+
+## 14. What is the riskometer level of HDFC Liquid Fund?
+*Type: answer*
+
+> As on August 31, 2026 the scheme's riskometer reads 'Low to Moderate' (the risk of the scheme is low to moderate); its potential risk class is B-I (relatively low interest rate risk, moderate credit risk).
+> 
+> Source: HDFC Liquid Fund - Fund Facts (Factsheet) September 2026 (p.2) - https://www.hdfcfund.com/explore/mutual-funds/hdfc-liquid-fund/direct
+> Last updated from sources: 2026-08-31
+
+## 15. What is the exit load?
 *Type: clarify*
 
-> Which scheme do you mean: HDFC Flexi Cap Fund or HDFC Mid Cap Fund or HDFC ELSS Tax Saver Fund? I can answer one scheme per question.
+> Which scheme do you mean: HDFC Flexi Cap Fund or HDFC Mid Cap Fund or HDFC ELSS Tax Saver Fund or HDFC Liquid Fund? I can answer one scheme per question.
 > 
 > Learn more: https://www.hdfcfund.com/explore/mutual-funds

@@ -285,5 +285,102 @@
    "Inception Date March 31, 1996",
    "scheme name changed w.e.f 26th August 2026"
   ]
+ },
+ {
+  "id": "exit-load",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "exit\\s*load",
+  "source_id": "liq_fs",
+  "page": 2,
+  "answer": "For investments made on or after October 20, 2019, the exit load is graded: 0.0070% if redeemed on Day 1, falling by 0.0005% each day to 0.0045% on Day 6, and Nil from Day 7 onwards. Investments made on or before October 19, 2019 have no exit load.",
+  "quotes": [
+   "Day 1 0.0070%",
+   "Day 6 0.0045%",
+   "Day 7 onwards Nil",
+   "On investments made on or before October 19, 2019 : NIL"
+  ]
+ },
+ {
+  "id": "min-investment",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "minimum|\\bmin\\b|\\bsip\\b|systematic investment|how much (do|to) (i )?(need|invest)",
+  "source_id": "liq_kim",
+  "page": 16,
+  "answer": "For the Growth Option the minimum application and additional purchase amount is Rs.100 and any amount thereafter; for the Daily IDCW Option it is Rs.10,000 and for the Weekly and Monthly IDCW Options Rs.5,000. The documents do not state a separate minimum SIP instalment for this scheme.",
+  "quotes": [
+   "Growth Option: Rs.100/- and",
+   "Rs.10,000/- and any amount",
+   "Rs.5,000/- and any amount"
+  ]
+ },
+ {
+  "id": "expense-ratio",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "expense|\\bter\\b|total expense",
+  "source_id": "liq_kim",
+  "page": 19,
+  "answer": "The maximum Total Expense Ratio (Regulation 52(6)) is 2.00% p.a. on the first Rs.500 crore of daily net assets, falling in slabs to 0.80% p.a. on the balance. The actual current TER is published by the fund house.",
+  "quotes": [
+   "On the first Rs.500 crores of the daily net assets - 2.00% p.a.",
+   "On balance of the assets \u2013 0.80% p.a."
+  ]
+ },
+ {
+  "id": "benchmark",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "benchmark|\\bindex\\b",
+  "source_id": "liq_fs",
+  "page": 2,
+  "answer": "The scheme's benchmark is the CRISIL Liquid Debt A-I Index.",
+  "quotes": [
+   "Benchmark CRISIL Liquid Debt A-I Index"
+  ]
+ },
+ {
+  "id": "riskometer",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "risk(o)?\\s?-?meter|risk level|how risky|risk of the scheme",
+  "source_id": "liq_fs",
+  "page": 2,
+  "answer": "As on August 31, 2026 the scheme's riskometer reads 'Low to Moderate' (the risk of the scheme is low to moderate); its potential risk class is B-I (relatively low interest rate risk, moderate credit risk).",
+  "quotes": [
+   "Riskometer as on 31 August, 2026"
+  ],
+  "manual": "The risk of the scheme is low to moderate"
+ },
+ {
+  "id": "lock-in",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "lock[- ]?in",
+  "source_id": "liq_sid",
+  "page": 9,
+  "answer": "HDFC Liquid Fund is a liquid scheme, and its documents mention a lock-in only as 'if any' without stating one for this scheme. For an ELSS (tax-saver) scheme, ask about HDFC ELSS Tax Saver Fund.",
+  "quotes": [
+   "lock-in period, if any"
+  ]
+ },
+ {
+  "id": "statements",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "statement|\\bcas\\b|account summary",
+  "source_id": "liq_kim",
+  "page": 21,
+  "answer": "A monthly Consolidated Account Statement (CAS) is sent on or before the 12th of the following month to unit holders whose folios had transactions in the month. Step-by-step download instructions, including for capital-gains statements, are not in these documents.",
+  "quotes": [
+   "on or before 12th of the succeeding month"
+  ]
+ },
+ {
+  "id": "category",
+  "scheme": "HDFC Liquid Fund",
+  "pattern": "category|type of (fund|scheme)|what kind|inception|launch",
+  "source_id": "liq_fs",
+  "page": 2,
+  "answer": "HDFC Liquid Fund is an open-ended liquid scheme (relatively low interest rate risk and moderate credit risk) with an inception date of October 17, 2000.",
+  "quotes": [
+   "Category of Scheme Liquid Fund",
+   "Inception Date October 17, 2000",
+   "An Open ended Liquid Scheme"
+  ]
  }
 ]

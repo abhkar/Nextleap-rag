@@ -42,6 +42,10 @@ class Behaviour(unittest.TestCase):
         self.assertIn("Nil", a.ask("exit load of HDFC ELSS Tax Saver")["answer"])
         self.assertIn("Rs.500", a.ask("minimum investment in tax saver fund")["answer"])
         self.assertIn("HDFC Flexi Cap Fund is categorised", a.ask("Is HDFC Flexi Cap Fund an ELSS with lock-in?")["answer"])
+        self.assertIn("0.0070%", a.ask("exit load of HDFC Liquid Fund")["answer"])
+        self.assertIn("CRISIL Liquid Debt A-I", a.ask("benchmark of liquid fund")["answer"])
+        self.assertIn("low to moderate", a.ask("riskometer of liquid fund")["answer"])
+        self.assertIn("0.80%", a.ask("expense ratio of liquid fund")["answer"])
         self.assertEqual(a.ask("what is the exit load?")["kind"], "clarify")
         self.assertEqual(a.ask("compare exit load of flexi cap and mid cap")["kind"], "clarify")
         self.assertEqual(a.ask("benchmark returns of mid cap fund")["kind"], "refusal")
@@ -53,7 +57,7 @@ class Behaviour(unittest.TestCase):
 
     def test_answer_sentence_limit(self):
         for q in ["exit load", "minimum sip", "expense ratio", "benchmark", "riskometer", "lock-in", "statement", "category"]:
-          for sc in ("flexi cap fund", "mid cap fund", "elss tax saver fund"):
+          for sc in ("flexi cap fund", "mid cap fund", "elss tax saver fund", "liquid fund"):
             body = self.a.ask(f"{q} of {sc}")["answer"].split("\n\nSource:")[0]
             self.assertLessEqual(len(re.findall(r"[.!?](?:\s+[A-Z'(]|$)", body)), 3, q)
 
